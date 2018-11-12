@@ -17,6 +17,6 @@ set laststatus=2
 set showmatch
 set wildmode=list:longest
 set expandtab
-set shiftwidth=2
+set shiftwidth=4
 set clipboard+=unnamed
 set wildmenu
