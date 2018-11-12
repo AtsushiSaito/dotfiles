@@ -9,3 +9,6 @@ prezto:
 
 dotinstall:
 	/bin/bash dotfile_install.sh
+
+viminit:
+	/bin/bash etc/init/vim.sh
