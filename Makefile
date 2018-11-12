@@ -12,3 +12,6 @@ dotinstall:
 
 viminit:
 	/bin/bash etc/init/vim.sh
+
+mac_nodebrew:
+	/bin/bash etc/init/nodebrew.sh
