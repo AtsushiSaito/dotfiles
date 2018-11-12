@@ -6,3 +6,6 @@ macinit:
 
 prezto:
 	/bin/zsh etc/init/prezto.sh
+
+dotinstall:
+	/bin/bash dotfile_install.sh
