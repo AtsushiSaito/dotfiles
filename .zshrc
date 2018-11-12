@@ -21,6 +21,9 @@ if [ -d "${PYENV_ROOT}" ]; then
 	eval "$(pyenv init -)"
 fi
 
+# nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH 
+
 # Export
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
