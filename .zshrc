@@ -10,6 +10,10 @@ PROMPT='%F{2}%n%f:%F{5}%~%f$ '
 alias ls='ls -G'
 alias la='ls -la'
 
+if [ -x /usr/bin/dircolors ]; then
+    alias ls='ls --color=auto'
+fi
+
 # Xcode Alias
 alias podclean='pod deintegrate && pod clean'
 alias cartup='DEVELOPER_DIR=/Applications/Xcode.app carthage update --platform ios'
