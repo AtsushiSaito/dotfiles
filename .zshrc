@@ -4,7 +4,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Prompt
-PROMPT='%F{2}%n%f:%F{5}%~%f$ '
+PROMPT='%F{yellow}%n%f:%F{green}$%f '
 
 # General Alias
 alias ls='ls -G'
