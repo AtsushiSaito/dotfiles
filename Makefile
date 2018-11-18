@@ -10,6 +10,10 @@ prezto:
 dotinstall:
 	/bin/bash dotfile_install.sh
 
+ubuntu_dotinstall:
+	/bin/bash dotfile_install.sh
+	/bin/bash ubuntu_dotfiles/dotfile_install.sh
+
 viminit:
 	/bin/bash etc/init/vim.sh
 
