@@ -115,3 +115,14 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+if [ -x /opt/ros/kinetic ];then
+    source /opt/ros/kinetic/setup.bash
+fi
+
+if [ -x $HOME/catkin_ws ];then
+    source ~/catkin_ws/devel/setup.bash
+fi
+
+export ROS_MASTER_URI=http://localhost:11311
+export ROS_HOSTNAME=localhost
