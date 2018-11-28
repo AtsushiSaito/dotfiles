@@ -48,7 +48,6 @@ fi
 if [ -x $HOME/catkin_ws ];then
     source ~/catkin_ws/devel/setup.zsh
     alias cm='(){(cd ~/catkin_ws && \catkin_make $@) && source ~/catkin_ws/devel/setup.zsh}'
-
 fi
 
 export ROS_MASTER_URI=http://localhost:11311
