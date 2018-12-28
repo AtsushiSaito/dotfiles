@@ -2,5 +2,5 @@
 
 cat vscode/extensions | while read line
 do
-    code --install-extension $line
+    code --uninstall-extension $line
 done

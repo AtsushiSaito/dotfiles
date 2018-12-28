@@ -26,5 +26,8 @@ vscode_setting_install:
 vscode_extensions_install:
 	/bin/bash vscode/install_extensions.sh
 
+vscode_extensions_uninstall:
+	/bin/bash vscode/uninstall_extensions.sh
+
 vscode_listup_extensions:
 	/bin/bash vscode/listup-extensions.sh
