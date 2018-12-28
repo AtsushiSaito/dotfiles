@@ -19,3 +19,12 @@ viminit:
 
 mac_nodebrew:
 	/bin/bash etc/init/nodebrew.sh
+
+vscode_setting_install:
+	/bin/bash vscode/install_setting_json.sh
+
+vscode_extensions_install:
+	/bin/bash vscode/install_extensions.sh
+
+vscode_listup_extensions:
+	/bin/bash vscode/listup-extensions.sh

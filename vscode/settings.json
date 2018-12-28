@@ -1,0 +1,49 @@
+{
+    "editor.fontSize": 14,
+    "editor.formatOnSave": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "explorer.confirmDelete": false,
+    "git.enableSmartCommit": true,
+    "editor.renderIndentGuides": true,
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "platex",
+            "tools": [
+                "platex",
+                "pbibtex",
+                "platex",
+                "platex",
+                "dvipdfmx"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "platex",
+            "command": "platex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-kanji=utf8",
+                "-shell-escape",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "dvipdfmx",
+            "command": "dvipdfmx",
+            "args": [
+                "%DOCFILE%.dvi"
+            ]
+        },
+        {
+            "name": "pbibtex",
+            "command": "pbibtex",
+            "args": [
+                "-kanji=utf8",
+                "%DOCFILE%"
+            ]
+        }
+    ]
+}
