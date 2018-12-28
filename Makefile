@@ -14,9 +14,6 @@ ubuntu_dotinstall:
 	/bin/bash dotfile_install.sh
 	/bin/bash ubuntu_dotfiles/dotfile_install.sh
 
-viminit:
-	/bin/bash etc/init/vim.sh
-
 mac_nodebrew:
 	/bin/bash etc/init/nodebrew.sh
 
