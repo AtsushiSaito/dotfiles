@@ -1,48 +1,35 @@
 {
     "editor.fontSize": 14,
     "editor.formatOnSave": true,
+    "files.trimTrailingWhitespace": true,
     "workbench.startupEditor": "newUntitledFile",
     "explorer.confirmDelete": false,
     "git.enableSmartCommit": true,
     "editor.renderIndentGuides": true,
+    "editor.minimap.enabled": false,
     "latex-workshop.latex.recipes": [
         {
-            "name": "platex",
+            "name": "latexmk",
             "tools": [
-                "platex",
-                "pbibtex",
-                "platex",
-                "platex",
-                "dvipdfmx"
+                "latexmk",
+                "latexmk_clean"
             ]
         }
     ],
     "latex-workshop.latex.tools": [
         {
-            "name": "platex",
-            "command": "platex",
+            "name": "latexmk",
+            "command": "latexmk",
             "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "-kanji=utf8",
-                "-shell-escape",
+                "-pv",
                 "%DOC%"
             ]
         },
         {
-            "name": "dvipdfmx",
-            "command": "dvipdfmx",
+            "name": "latexmk_clean",
+            "command": "latexmk",
             "args": [
-                "%DOCFILE%.dvi"
-            ]
-        },
-        {
-            "name": "pbibtex",
-            "command": "pbibtex",
-            "args": [
-                "-kanji=utf8",
-                "%DOCFILE%"
+                "-c"
             ]
         }
     ]
