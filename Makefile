@@ -28,3 +28,6 @@ vscode_extensions_uninstall:
 
 vscode_listup_extensions:
 	/bin/bash vscode/listup-extensions.sh
+
+vim_make:
+	/bin/bash etc/init/vim_make.sh
