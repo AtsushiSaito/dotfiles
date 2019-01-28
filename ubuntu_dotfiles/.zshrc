@@ -7,18 +7,18 @@ fi
 # PROMPT='%F{yellow}%m@%n%f:%F{blue}%~%f$ '
 PROMPT='%F{yellow}%n@%m%f:%F{blue}%~%f$ '
 
-
-# General Alias
-alias ls='ls -G'
-alias la='ls -la -h --time-style=long-iso'
-
-if [ -x /usr/bin/dircolors ]; then
-    alias ls='ls --color=auto'
+if [ -x $HOME/.dircolors ]; then
+    eval $(dircolors ~/.dircolors/dircolors.ansi-dark)
+	zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+else
+	git clone git@github.com:seebi/dircolors-solarized.git ~/.dircolors
 fi
 
-# Xcode Alias
-alias podclean='pod deintegrate && pod clean'
-alias cartup='DEVELOPER_DIR=/Applications/Xcode.app carthage update --platform ios'
+
+
+# General Alias
+alias ls='ls --color=auto'
+alias la='ls -la --color=auto -h --time-style=long-iso'
 
 # Pyenv
 export PYENV_ROOT=$HOME/.pyenv
