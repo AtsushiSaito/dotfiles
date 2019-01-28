@@ -3,16 +3,22 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 	source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+autoload -Uz colors
+colors
+
 # Prompt
 PROMPT='%F{yellow}%m@%n%f:%F{blue}%~%f$ '
 
-# General Alias
-alias ls='ls -G'
-alias la='ls -la -h --time-style=long-iso'
-
-if [ -x /usr/bin/dircolors ]; then
-    alias ls='ls --color=auto'
+if [ -x $HOME/.dircolors ]; then
+    eval $(dircolors ~/.dircolors/dircolors.ansi-dark)
+	zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+else
+	git clone git@github.com:seebi/dircolors-solarized.git ~/.dircolors
 fi
+
+# General Alias
+alias ls='gls --color=auto'
+alias la='gls -la --color=auto -h --time-style=long-iso'
 
 # Xcode Alias
 alias podclean='pod deintegrate && pod clean'
@@ -26,7 +32,7 @@ if [ -d "${PYENV_ROOT}" ]; then
 fi
 
 # nodebrew
-export PATH=$HOME/.nodebrew/current/bin:$PATH 
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # Export
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
