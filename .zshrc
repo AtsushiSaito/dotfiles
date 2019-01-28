@@ -8,7 +8,7 @@ PROMPT='%F{yellow}%m@%n%f:%F{blue}%~%f$ '
 
 # General Alias
 alias ls='ls -G'
-alias la='ls -la'
+alias la='ls -la -h --time-style=long-iso'
 
 if [ -x /usr/bin/dircolors ]; then
     alias ls='ls --color=auto'
