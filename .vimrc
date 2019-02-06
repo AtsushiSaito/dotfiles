@@ -1,24 +1,24 @@
 " プラグイン管理"
 call plug#begin('~/.vim/plugged')
 	Plug 'Shougo/unite.vim'
-	Plug 'tpope/vim-fugitive'
-    Plug 'vim-airline/vim-airline'
 	Plug 'tomasr/molokai'
-    Plug 'vim-airline/vim-airline-themes'
-    Plug 'airblade/vim-gitgutter'
     Plug 'bronson/vim-trailing-whitespace'
-    Plug 'maralla/completor.vim'
     Plug 'davidhalter/jedi-vim'
 call plug#end()
 
 colorscheme molokai
+
+set completeopt=menuone
+for k in split("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_",'\zs')
+  exec "imap <expr> " . k . " pumvisible() ? '" . k . "' : '" . k . "\<C-X>\<C-P>\<C-N>'"
+endfor
 
 syntax on
 set nocp
 set shiftwidth=2
 set tabstop=4
 set expandtab
-set laststatus=2
+set laststatus=1
 set showmatch
 set visualbell
 set smartindent
