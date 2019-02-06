@@ -1,5 +1,5 @@
 {
-    "editor.fontSize": 14,
+    "editor.fontSize": 16,
     "editor.formatOnSave": true,
     "files.trimTrailingWhitespace": true,
     "workbench.startupEditor": "newUntitledFile",
@@ -8,37 +8,4 @@
     "editor.renderIndentGuides": true,
     "editor.minimap.enabled": false,
     "editor.renderControlCharacters": true,
-    "latex-workshop.latex.recipes": [
-        {
-            "name": "latexmk",
-            "tools": [
-                "latexmk",
-                "latexmk_clean"
-            ]
-        }
-    ],
-    "latex-workshop.latex.tools": [
-        {
-            "name": "latexmk_pv",
-            "command": "latexmk",
-            "args": [
-                "-pv",
-                "%DOC%"
-            ]
-        },
-        {
-            "name": "latexmk",
-            "command": "latexmk",
-            "args": [
-                "%DOC%"
-            ]
-        },
-        {
-            "name": "latexmk_clean",
-            "command": "latexmk",
-            "args": [
-                "-c"
-            ]
-        }
-    ]
 }
