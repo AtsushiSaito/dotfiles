@@ -34,3 +34,6 @@ vim_make:
 
 zsh_make:
 	/bin/bash etc/init/zsh_make.sh
+
+tmux_make:
+	/bin/bash etc/init/tmux_make.sh
