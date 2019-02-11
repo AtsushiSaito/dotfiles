@@ -4,14 +4,10 @@ call plug#begin('~/.vim/plugged')
 	Plug 'tomasr/molokai'
     Plug 'bronson/vim-trailing-whitespace'
     Plug 'davidhalter/jedi-vim'
+    Plug 'maralla/completor.vim'
 call plug#end()
 
 colorscheme molokai
-
-set completeopt=menuone
-for k in split("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_",'\zs')
-  exec "imap <expr> " . k . " pumvisible() ? '" . k . "' : '" . k . "\<C-X>\<C-P>\<C-N>'"
-endfor
 
 syntax on
 set nocp
