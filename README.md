@@ -10,3 +10,8 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 ```
 sudo date -s "$(curl -s --head http://www.google.co.jp | grep '^Date' | cut -b 7-)"
 ```
+
+## タイムゾーンを東京にする
+```
+sudo timedatectl set-timezone Asia/Tokyo
+```
