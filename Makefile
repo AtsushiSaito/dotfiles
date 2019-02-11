@@ -31,3 +31,6 @@ vscode_listup_extensions:
 
 vim_make:
 	/bin/bash etc/init/vim_make.sh
+
+zsh_make:
+	/bin/bash etc/init/zsh_make.sh
