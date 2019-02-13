@@ -20,6 +20,7 @@ fi
 alias ls='ls --color=auto'
 alias la='ls -la --color=auto -h --time-style=long-iso'
 alias nowclock='cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq'
+alias overclock='sudo cpufreq-set -g performance'
 
 # Pyenv
 export PYENV_ROOT=$HOME/.pyenv
