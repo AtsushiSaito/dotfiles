@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'tomasr/molokai'
     Plug 'bronson/vim-trailing-whitespace'
     Plug 'maralla/completor.vim'
+    Plug 'scrooloose/nerdtree'
 call plug#end()
 
 colorscheme molokai
@@ -31,3 +32,5 @@ set clipboard+=autoselect
 let g:molokai_original = 1
 let g:rehash256 = 1
 set background=dark
+
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
