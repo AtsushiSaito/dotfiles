@@ -3,12 +3,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'Shougo/unite.vim'
 	Plug 'tomasr/molokai'
     Plug 'bronson/vim-trailing-whitespace'
-    "Plug 'davidhalter/jedi-vim'
     Plug 'maralla/completor.vim'
-    Plug 'prabirshrestha/async.vim'
-    Plug 'prabirshrestha/vim-lsp'
-    Plug 'prabirshrestha/asyncomplete.vim'
-    Plug 'prabirshrestha/asyncomplete-lsp.vim'
 call plug#end()
 
 colorscheme molokai
@@ -36,18 +31,3 @@ set clipboard+=autoselect
 let g:molokai_original = 1
 let g:rehash256 = 1
 set background=dark
-
-"let g:airline_theme = 'papercolor'
-
-"inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-"inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-let g:deoplete#enable_at_startup = 1
-
-if executable('clangd')
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'clangd',
-        \ 'cmd': {server_info->['clangd']},
-        \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
-        \ })
-endif
