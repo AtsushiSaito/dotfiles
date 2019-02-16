@@ -5,7 +5,8 @@ fi
 
 # Prompt
 # PROMPT='%F{yellow}%m@%n%f:%F{blue}%~%f$ '
-PROMPT='%F{yellow}%n@%m%f:%F{blue}%~%f$ '
+#PROMPT='%F{yellow}%n@%m%f:%F{blue}%~%f$ '
+PROMPT='%F{yellow}%n%f:%F{blue}%~%f$ '
 
 if [ -x $HOME/.dircolors ]; then
     eval $(dircolors ~/.dircolors/dircolors.ansi-dark)
@@ -43,7 +44,7 @@ setopt share_history
 setopt inc_append_history
 
 autoload -Uz compinit
-compinit
+compinit -C
 
 if [ -x /opt/ros/kinetic ];then
     source /opt/ros/kinetic/setup.zsh
