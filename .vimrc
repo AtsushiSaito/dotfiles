@@ -30,6 +30,8 @@ set wildmenu wildmode=list:longest,full
 set history=1000
 set ambiwidth=double
 set backspace=indent,eol,start
+set clipboard+=unnamed
+set clipboard+=autoselect
 
 let g:molokai_original = 1
 let g:rehash256 = 1
