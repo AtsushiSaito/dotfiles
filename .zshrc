@@ -9,6 +9,16 @@ colors
 # Prompt
 PROMPT='%F{yellow}%n%f:%F{blue}%~%f$ '
 
+#export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+
+if [ -x /usr/local/opt/coreutils ]; then
+    export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+    export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+else
+    echo "Please install coreutils"
+    echo "brew install coreutils"
+fi
+
 if [ -x $HOME/.dircolors ]; then
     eval $(dircolors ~/.dircolors/dircolors.ansi-dark)
 	zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
