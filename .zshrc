@@ -24,6 +24,11 @@ else
 	git clone git@github.com:seebi/dircolors-solarized.git ~/.dircolors
 fi
 
+if [ -x $HOME/.zsh/completion ]; then
+  fpath=(~/.zsh/completion $fpath)
+  echo "UNKo"
+fi
+
 # General Alias
 alias ls='gls --color=auto'
 alias la='gls -la --color=auto -h --time-style=long-iso'

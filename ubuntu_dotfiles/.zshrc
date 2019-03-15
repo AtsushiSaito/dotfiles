@@ -15,7 +15,9 @@ else
 	git clone git@github.com:seebi/dircolors-solarized.git ~/.dircolors
 fi
 
-
+if [ -x $HOME/.zsh/completion ]; then
+  fpath=(~/.zsh/completion $fpath)
+fi
 
 # General Alias
 alias ls='ls --color=auto'
