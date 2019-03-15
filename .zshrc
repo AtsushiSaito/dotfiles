@@ -26,7 +26,6 @@ fi
 
 if [ -x $HOME/.zsh/completion ]; then
   fpath=(~/.zsh/completion $fpath)
-  echo "UNKo"
 fi
 
 # General Alias
