@@ -37,3 +37,6 @@ zsh_make:
 
 tmux_make:
 	/bin/bash etc/init/tmux_make.sh
+
+code_server_setup:
+	/bin/bash etc/init/code_server_install.sh
