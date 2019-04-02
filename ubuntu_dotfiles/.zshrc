@@ -33,7 +33,7 @@ if [ -d "${PYENV_ROOT}" ]; then
 fi
 
 # nodebrew
-export PATH=$HOME/.nodebrew/current/bin:$PATH 
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # Export
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
@@ -57,8 +57,9 @@ if [ -x $HOME/catkin_ws ];then
     alias cm='(){(cd ~/catkin_ws && \catkin_make $@) && source ~/catkin_ws/devel/setup.zsh}'
 fi
 
-export ROS_MASTER_URI=http://localhost:11311
-export ROS_HOSTNAME=localhost
+if [ -f ~/.shere_config ]; then
+    . ~/.shere_config
+fi
 
 alias cs='code-server --no-auth -d ~/.code-server'
 alias cs-stop='kill -9 `ps auxw | grep code-server | egrep -v grep | egrep -v rotatelogs2 | awk '{print $2}'`'

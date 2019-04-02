@@ -125,6 +125,6 @@ if [ -x $HOME/catkin_ws ];then
     function cm(){(cd ~/catkin_ws && command catkin_make $@) && source ~/catkin_ws/devel/setup.bash;}
 fi
 
-if [ -f ~/.ros_aliases ]; then
-    . ~/.ros_aliases
+if [ -f ~/.shere_config ]; then
+    . ~/.shere_config
 fi
