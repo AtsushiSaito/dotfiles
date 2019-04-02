@@ -1,5 +1,9 @@
+if [ -f /usr/bin/code-server ]; then
+    alias cs='code-server --no-auth -d ~/.code-server'
+    alias cs-stop='kill -9 `ps auxw | grep code-server | egrep -v grep | egrep -v rotatelogs2 | awk '{print $2}'`'
+fi
+
 export ROS_MASTER_URI=http://localhost:11311
 export ROS_HOSTNAME=localhost
 
 export TURTLEBOT3_MODEL=waffle
-echo "UNKO"

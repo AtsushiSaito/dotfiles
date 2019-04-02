@@ -60,6 +60,3 @@ fi
 if [ -f ~/.shere_config ]; then
     . ~/.shere_config
 fi
-
-alias cs='code-server --no-auth -d ~/.code-server'
-alias cs-stop='kill -9 `ps auxw | grep code-server | egrep -v grep | egrep -v rotatelogs2 | awk '{print $2}'`'
