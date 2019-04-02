@@ -125,5 +125,6 @@ if [ -x $HOME/catkin_ws ];then
     function cm(){(cd ~/catkin_ws && command catkin_make $@) && source ~/catkin_ws/devel/setup.bash;}
 fi
 
-export ROS_MASTER_URI=http://localhost:11311
-export ROS_HOSTNAME=localhost
+if [ -f ~/.ros_aliases ]; then
+    . ~/.ros_aliases
+fi
