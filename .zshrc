@@ -7,7 +7,7 @@ autoload -Uz colors
 colors
 
 # Prompt
-PROMPT='%F{yellow}%n%f:%F{blue}%~%f$ '
+PROMPT='%F{yellow}%n@%m%f:%F{blue}%~%f$ '
 
 if [ -x /usr/local/opt/coreutils ]; then
     export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
