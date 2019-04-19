@@ -1,6 +1,6 @@
 {
     "editor.fontSize": 14,
-    //"editor.formatOnSave": true,
+    "editor.formatOnSave": true,
     "files.trimTrailingWhitespace": true,
     "workbench.startupEditor": "newUntitledFile",
     "explorer.confirmDelete": false,
@@ -8,4 +8,7 @@
     "editor.renderIndentGuides": true,
     "editor.minimap.enabled": false,
     "editor.renderControlCharacters": true,
+    "terminal.integrated.fontFamily": "Monaco",
+    "terminal.integrated.fontSize": 14,
+    "workbench.colorTheme": "Atomized Theme"
 }
