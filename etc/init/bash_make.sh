@@ -6,8 +6,8 @@ sudo wget http://ftp.gnu.org/gnu/bash/bash-5.0.tar.gz -O bash-5.0.tar.gz
 #sudo tar xvf zsh-5.5.1.tar.xz
 #cd zsh-5.5.1
 sudo tar xvf bash-5.0.tar.gz
-cd bash-5.0.tar.gz
-./configure
+cd bash-5.0
+sudo ./configure
 sudo make
 sudo make install
 
