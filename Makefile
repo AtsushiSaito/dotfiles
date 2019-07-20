@@ -35,8 +35,14 @@ vim_make:
 zsh_make:
 	/bin/bash etc/init/zsh_make.sh
 
+bash_make:
+	/bin/bash etc/init/bash_make.sh
+
 tmux_make:
 	/bin/bash etc/init/tmux_make.sh
 
 code_server_setup:
 	/bin/bash etc/init/code_server_install.sh
+
+mac_ricty_make:
+	/bin/bash etc/init/ricty_make_mac.sh
