@@ -3,6 +3,10 @@
 mac_homebrew_installl:
 	/bin/bash mac/init/homebrew.sh
 
+## install lua vim
+mac_lua_vim_install:
+	/bin/bash mac/init/lua_vim_install.sh
+
 ## install dotfiles
 mac_dotfiles_install:
 	/bin/bash common/init/dotfiles_install.sh
