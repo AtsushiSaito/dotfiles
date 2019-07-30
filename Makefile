@@ -66,3 +66,11 @@ prezto_install:
 ## build vim
 build_bash:
 	/bin/bash common/init/build_bash.sh
+
+## install vimplug
+vim_plug_install:
+	/bin/bash common/init/vim_plug_install.sh
+
+## date set (google)
+no_ntp_date_setting:
+	/bin/bash common/init/no_ntp_date_setting.sh
