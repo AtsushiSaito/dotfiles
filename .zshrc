@@ -58,3 +58,6 @@ setopt inc_append_history
 
 autoload -Uz compinit
 compinit -C
+
+
+export PATH=$PATH:/Users/atsushi/Library/Android/sdk/platform-tools
