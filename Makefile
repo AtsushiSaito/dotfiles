@@ -1,33 +1,33 @@
-brew:
-	/bin/bash etc/init/brew.sh
+mac_brew:
+	/bin/bash etc/init/mac_brew.sh
 
-macinit:
-	/bin/bash etc/init/mac.sh
+mac_init:
+	/bin/bash etc/init/mac_init.sh
 
 prezto:
 	/bin/zsh etc/init/prezto.sh
 
-dotinstall:
+mac_dotinstall:
 	/bin/bash dotfile_install.sh
 
 ubuntu_dotinstall:
-	/bin/bash dotfile_install.sh
-	/bin/bash ubuntu_dotfiles/dotfile_install.sh
+	/bin/bash mac_dotfile_install.sh
+	/bin/bash ubuntu_dotfiles/ubuntu_dotfile_install.sh
 
 mac_nodebrew:
-	/bin/bash etc/init/nodebrew.sh
+	/bin/bash etc/init/mac_nodebrew.sh
 
-vscode_setting_install:
-	/bin/bash vscode/install_setting_json.sh
+mac_vscode_setting_install:
+	/bin/bash mac_vscode/install_setting_json.sh
 
-vscode_extensions_install:
-	/bin/bash vscode/install_extensions.sh
+mac_vscode_extensions_install:
+	/bin/bash mac_vscode/install_extensions.sh
 
-vscode_extensions_uninstall:
-	/bin/bash vscode/uninstall_extensions.sh
+mac_vscode_extensions_uninstall:
+	/bin/bash mac_vscode/uninstall_extensions.sh
 
-vscode_listup_extensions:
-	/bin/bash vscode/listup-extensions.sh
+mac_vscode_listup_extensions:
+	/bin/bash mac_vscode/listup-extensions.sh
 
 vim_make:
 	/bin/bash etc/init/vim_make.sh
@@ -41,8 +41,8 @@ bash_make:
 tmux_make:
 	/bin/bash etc/init/tmux_make.sh
 
-code_server_setup:
-	/bin/bash etc/init/code_server_install.sh
+ubuntu_code_server_setup:
+	/bin/bash etc/init/ubuntu_code_server_install.sh
 
 mac_ricty_make:
 	/bin/bash etc/init/ricty_make_mac.sh
