@@ -1,13 +1,12 @@
 #!/bin/bash
 
-cd ubuntu_dotfiles
-DIR=`pwd`
-
+DIR=`pwd`/common
+cd $DIR
 for f in .??*
 do
     [[ "$f" == ".git" ]] && continue
     [[ "$f" == ".DS_Store" ]] && continue
 
     ln -sf $DIR/$f ~/$f
-    echo "$f"
+    echo "installed ($f) on $HOME"
 done

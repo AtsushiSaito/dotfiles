@@ -1,48 +1,64 @@
-mac_brew:
-	/bin/bash etc/init/mac_brew.sh
+########### Mac #############
+## install homebrew
+mac_homebrew_installl:
+	/bin/bash mac/init/homebrew.sh
 
-mac_init:
-	/bin/bash etc/init/mac_init.sh
+## install dotfiles
+mac_dotfiles_install:
+	/bin/bash common/init/dotfiles_install.sh
+	/bin/bash mac/init/dotfiles_install.sh
 
-prezto:
-	/bin/zsh etc/init/prezto.sh
-
-mac_dotinstall:
-	/bin/bash dotfile_install.sh
-
-ubuntu_dotinstall:
-	/bin/bash mac_dotfile_install.sh
-	/bin/bash ubuntu_dotfiles/ubuntu_dotfile_install.sh
-
+## install nodebrew
 mac_nodebrew:
-	/bin/bash etc/init/mac_nodebrew.sh
+	/bin/bash mac/init/nodebrew.sh
 
-mac_vscode_setting_install:
-	/bin/bash mac_vscode/install_setting_json.sh
+## install vscode's setting.json file to vscode's application directory
+mac_vscode_setting_json_install:
+	/bin/bash mac/vscode/setting_file_install.sh
 
+## install vscode extension from extensions file
 mac_vscode_extensions_install:
-	/bin/bash mac_vscode/install_extensions.sh
+	/bin/bash mac_vscode/extensions_install.sh
 
-mac_vscode_extensions_uninstall:
-	/bin/bash mac_vscode/uninstall_extensions.sh
+## listup vscode extensions
+mac_vscode_extensions_listup:
+	/bin/bash mac_vscode/extensions_listup.sh
 
-mac_vscode_listup_extensions:
-	/bin/bash mac_vscode/listup-extensions.sh
+## ricty generate
+mac_generate_ricty:
+	/bin/bash mac/init/generate_ricty.sh
 
-vim_make:
-	/bin/bash etc/init/vim_make.sh
+########### Ubuntu #############
 
+ubuntu_dotfiles_install:
+	/bin/bash common/init/dotfiles_install.sh
+	/bin/bash ubuntu/init/dotfiles_install.sh
+
+## build vim
+ubuntu_build_vim:
+	/bin/bash ubuntu/init/build_vim.sh
+
+## install code server
+ubuntu_code_server_install:
+	/bin/bash ubuntu/init/ubuntu_code_server_install.sh
+
+## build tmux
+build_tmux:
+	/bin/bash ubuntu/init/build_tmux.sh
+
+## build zsh
 zsh_make:
-	/bin/bash etc/init/zsh_make.sh
+	/bin/bash ubuntu/init/build_zsh.sh
 
-bash_make:
-	/bin/bash etc/init/bash_make.sh
+########### Common #############
+## initialize git config
+git_init_config:
+	/bin/bash common/init/git_init_config.sh
 
-tmux_make:
-	/bin/bash etc/init/tmux_make.sh
+## install prezto
+prezto_install:
+	/bin/zsh common/init/prezto_install.sh
 
-ubuntu_code_server_setup:
-	/bin/bash etc/init/ubuntu_code_server_install.sh
-
-mac_ricty_make:
-	/bin/bash etc/init/ricty_make_mac.sh
+## build vim
+build_bash:
+	/bin/bash common/init/build_bash.sh
