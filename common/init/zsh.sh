@@ -27,5 +27,3 @@ else
     echo "Your platform ($(uname -a)) is not supported."
     exit 1
 fi
-
-echo unko
