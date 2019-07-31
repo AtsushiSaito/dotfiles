@@ -4,46 +4,40 @@ brew:
 	/bin/bash common/init/homebrew.sh
 
 ## install lua vim
-mac_lua_vim_install:
-	/bin/bash mac/init/lua_vim_install.sh
+vim:
+	/bin/bash common/init/vim_install.sh
 
 ## install dotfiles
-dotfiles_install:
+dotfiles:
 	/bin/bash common/init/dotfiles_install.sh
 
 ## install nodebrew
-mac_nodebrew:
-	/bin/bash mac/init/nodebrew.sh
+nodebrew:
+	/bin/bash common/init/nodebrew.sh
 
 ## install vscode's setting.json file to vscode's application directory
-mac_vscode_setting_json_install:
-	/bin/bash mac/vscode/setting_file_install.sh
+vscode_init:
+	/bin/bash common/setting_file_install.sh
 
 ## install vscode extension from extensions file
-mac_vscode_extensions_install:
-	/bin/bash mac_vscode/extensions_install.sh
+vscode_extensions_install:
+	/bin/bash common/extensions_install.sh
 
 ## listup vscode extensions
-mac_vscode_extensions_listup:
-	/bin/bash mac_vscode/extensions_listup.sh
+vscode_extensions_listup:
+	/bin/bash common/extensions_listup.sh
 
 ## ricty generate
-mac_generate_ricty:
-	/bin/bash mac/init/generate_ricty.sh
-
-########### Ubuntu #############
-
-## build vim
-ubuntu_build_vim:
-	/bin/bash ubuntu/init/build_vim.sh
+ricty:
+	/bin/bash common/init/ricty.sh
 
 ## install code server
-ubuntu_code_server_install:
-	/bin/bash ubuntu/init/ubuntu_code_server_install.sh
+code_server_install:
+	/bin/bash common/init/code_server_install.sh
 
 ## build tmux
-build_tmux:
-	/bin/bash ubuntu/init/build_tmux.sh
+tmux:
+	/bin/bash common/init/tmux.sh
 
 ## build zsh
 zsh_make:
