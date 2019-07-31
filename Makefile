@@ -1,7 +1,7 @@
 ########### Mac #############
 ## install homebrew
-mac_homebrew_installl:
-	/bin/bash mac/init/homebrew.sh
+brew:
+	/bin/bash common/init/homebrew.sh
 
 ## install lua vim
 mac_lua_vim_install:
