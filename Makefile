@@ -8,9 +8,8 @@ mac_lua_vim_install:
 	/bin/bash mac/init/lua_vim_install.sh
 
 ## install dotfiles
-mac_dotfiles_install:
+dotfiles_install:
 	/bin/bash common/init/dotfiles_install.sh
-	/bin/bash mac/init/dotfiles_install.sh
 
 ## install nodebrew
 mac_nodebrew:
@@ -33,10 +32,6 @@ mac_generate_ricty:
 	/bin/bash mac/init/generate_ricty.sh
 
 ########### Ubuntu #############
-
-ubuntu_dotfiles_install:
-	/bin/bash common/init/dotfiles_install.sh
-	/bin/bash ubuntu/init/dotfiles_install.sh
 
 ## build vim
 ubuntu_build_vim:
