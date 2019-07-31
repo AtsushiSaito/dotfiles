@@ -1,4 +1,3 @@
-########### Mac #############
 ## install homebrew
 brew:
 	/bin/bash common/init/homebrew.sh
@@ -40,26 +39,24 @@ tmux:
 	/bin/bash common/init/tmux.sh
 
 ## build zsh
-zsh_make:
-	/bin/bash ubuntu/init/build_zsh.sh
+zsh:
+	/bin/bash common/init/zsh.sh
 
-########### Common #############
-## initialize git config
-git_init_config:
+gitconfig:
 	/bin/bash common/init/git_init_config.sh
 
 ## install prezto
-prezto_install:
+prezto:
 	/bin/zsh common/init/prezto_install.sh
 
 ## build vim
-build_bash:
-	/bin/bash common/init/build_bash.sh
+bash:
+	/bin/bash common/init/bash.sh
 
 ## install vimplug
-vim_plug_install:
+vimplug:
 	/bin/bash common/init/vim_plug_install.sh
 
 ## date set (google)
-no_ntp_date_setting:
+no_ntp_date:
 	/bin/bash common/init/no_ntp_date_setting.sh
