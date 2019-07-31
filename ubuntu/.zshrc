@@ -4,7 +4,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Prompt
-PROMPT='%F{yellow}%n@%m%f:%F{blue}%~%f$ '
+PROMPT='%F{yellow}%n:%F{blue}%~%f [%m] $ '
 #PROMPT='%F{yellow}%n@%m%f:%F{blue}%~%f$ '
 #PROMPT='%F{yellow}%n%f:%F{blue}%~%f$ '
 
