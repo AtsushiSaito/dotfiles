@@ -54,7 +54,7 @@ fi
 
 if [ -x $HOME/catkin_ws ];then
     source ~/catkin_ws/devel/setup.zsh
-    alias cm='(){(cd ~/catkin_ws && \catkin_make $@) && source ~/catkin_ws/devel/setup.zsh}'
+    alias cm='(){(cd ~/catkin_ws && \catkin build $@) && source ~/catkin_ws/devel/setup.zsh}'
 fi
 
 if [ -f ~/.shere_config ]; then
