@@ -120,6 +120,10 @@ if [ -x /opt/ros/kinetic ];then
     source /opt/ros/kinetic/setup.bash
 fi
 
+if [ -x /opt/ros/melodic ];then
+    source /opt/ros/melodic/setup.bash
+fi
+
 if [ -x $HOME/catkin_ws ];then
     source ~/catkin_ws/devel/setup.bash
     function cm(){(cd ~/catkin_ws && command catkin_make $@) && source ~/catkin_ws/devel/setup.bash;}
