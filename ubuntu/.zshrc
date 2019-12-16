@@ -12,7 +12,7 @@ if [ -x $HOME/.dircolors ]; then
     eval $(dircolors ~/.dircolors/dircolors.ansi-dark)
 	zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 else
-	git clone git@github.com:seebi/dircolors-solarized.git ~/.dircolors
+	git clone https://github.com/seebi/dircolors-solarized.git ~/.dircolors
 fi
 
 if [ -x $HOME/.zsh/completion ]; then
@@ -54,7 +54,7 @@ fi
 
 if [ -x $HOME/catkin_ws ];then
     source ~/catkin_ws/devel/setup.zsh
-    alias cm='(){(cd ~/catkin_ws && \catkin build $@) && source ~/catkin_ws/devel/setup.zsh}'
+    alias cm='(){(cd ~/catkin_ws && \catkin build -j1 $@) && source ~/catkin_ws/devel/setup.zsh}'
 fi
 
 if [ -f ~/.shere_config ]; then
