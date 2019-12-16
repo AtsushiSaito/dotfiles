@@ -52,6 +52,9 @@ if [ -x /opt/ros/kinetic ];then
     source /opt/ros/kinetic/setup.zsh
 fi
 
+if [ -x /opt/ros/melodic ];then
+    source /opt/ros/melodic/setup.zsh
+fi
 if [ -x $HOME/catkin_ws ];then
     source ~/catkin_ws/devel/setup.zsh
     alias cm='(){(cd ~/catkin_ws && \catkin build -j1 $@) && source ~/catkin_ws/devel/setup.zsh}'
