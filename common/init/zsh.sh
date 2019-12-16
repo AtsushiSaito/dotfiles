@@ -4,7 +4,7 @@ if [ "$(uname)" == 'Darwin' ]; then
     echo "Your platform ($(uname -a)) is not supported."
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
     sudo apt update
-    sudo apt-get install libncursesw5-dev
+    sudo apt-get -y install libncursesw5-dev
     cd /usr/local/src
     #sudo wget https://sourceforge.net/projects/zsh/files/zsh/5.5.1/zsh-5.5.1.tar.xz/download -O zsh-5.5.1.tar.xz
     sudo wget https://sourceforge.net/projects/zsh/files/zsh/5.7.1/zsh-5.7.1.tar.xz/download -O zsh-5.7.1.tar.xz
