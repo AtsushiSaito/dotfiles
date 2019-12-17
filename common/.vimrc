@@ -7,8 +7,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'scrooloose/nerdtree'
 call plug#end()
 
-colorscheme molokai
-
 syntax on
 set nocp
 set shiftwidth=2
