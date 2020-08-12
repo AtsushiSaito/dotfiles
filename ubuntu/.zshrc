@@ -63,3 +63,7 @@ fi
 if [ -f ~/.shere_config ]; then
     . ~/.shere_config
 fi
+
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
+export PATH=$PATH:/mnt/c/Users/AtsushiSaito/AppData/Local/Programs/Microsoft\ VS\ Code/bin/
+export PATH=$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/
