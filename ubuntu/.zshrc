@@ -4,16 +4,14 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Prompt
-PROMPT='%F{yellow}%n:%F{blue}%~%f [%m] $ '
+PROMPT='%B%F{2}%n@%m:%B%F{12}%~%f%b$ '
 #PROMPT='%F{yellow}%n@%m%f:%F{blue}%~%f$ '
 #PROMPT='%F{yellow}%n%f:%F{blue}%~%f$ '
 
-if [ -x $HOME/.dircolors ]; then
-    eval $(dircolors ~/.dircolors/dircolors.ansi-dark)
-	zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-else
-	git clone https://github.com/seebi/dircolors-solarized.git ~/.dircolors
-fi
+
+# Color
+#eval $(dircolors ~/.dircolors.ansi-dark)
+#zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 if [ -x $HOME/.zsh/completion ]; then
   fpath=(~/.zsh/completion $fpath)
