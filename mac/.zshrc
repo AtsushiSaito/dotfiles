@@ -3,13 +3,14 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 	source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Prompt
-PROMPT='%B%F{2}%n@%m:%B%F{12}%~%f%b$ '
-export LS_COLORS=di="01;34"
-
 autoload -Uz colors
 colors
 
+# Prompt
+PROMPT='%B%F{2}%n@%m:%B%F{12}%~%f%b$ '
+export LS_COLORS="di=01;34"
+# Zshのタブ補完にlsと同じ色をつける
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 if [ -x /usr/local/opt/coreutils ]; then
     export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
@@ -18,10 +19,6 @@ else
     echo "Please install coreutils"
     echo "brew install coreutils"
 fi
-
-# Color
-# eval $(dircolors ~/.dircolors.ansi-dark)
-# zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 if [ -x $HOME/.zsh/completion ]; then
   fpath=(~/.zsh/completion $fpath)
