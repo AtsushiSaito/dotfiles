@@ -3,11 +3,13 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 	source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+# Prompt
+PROMPT='%B%F{2}%n@%m:%B%F{12}%~%f%b$ '
+export LS_COLORS=di="01;34"
+
 autoload -Uz colors
 colors
 
-# Prompt
-PROMPT='%F{yellow}%n@%m%f:%F{cyan}%~%f$ '
 
 if [ -x /usr/local/opt/coreutils ]; then
     export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
@@ -18,12 +20,14 @@ else
 fi
 
 # Color
-eval $(dircolors ~/.dircolors.ansi-dark)
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+# eval $(dircolors ~/.dircolors.ansi-dark)
+# zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 if [ -x $HOME/.zsh/completion ]; then
   fpath=(~/.zsh/completion $fpath)
 fi
+
+alias code='code-insiders'
 
 # General Alias
 alias ls='gls --color=auto'
