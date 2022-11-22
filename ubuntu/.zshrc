@@ -4,7 +4,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Prompt
-PROMPT='%B%F{2}%n@%m:%B%F{12}%~%f%b$ '
+PROMPT='%B%F{12}%~%f%b $ '
+#PROMPT='%B%F{2}%n@%m:%B%F{12}%~%f%b$ '
 #PROMPT='%F{yellow}%n@%m%f:%F{blue}%~%f$ '
 #PROMPT='%F{yellow}%n%f:%F{blue}%~%f$ '
 export LS_COLORS=di="01;34"
